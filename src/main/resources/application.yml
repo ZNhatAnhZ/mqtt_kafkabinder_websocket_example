@@ -1,1 +1,24 @@
+spring:
+  cloud:
+    function:
+      definition: lmaoinput;lmaooutput
+    stream:
+      bindings:
+        lmaoinput-in-0:
+          destination: kafkatopicoutput
+        lmaooutput-out-0:
+          destination: kafkatopicoutput
+      default-binder: kafka
+#      kafka:
+#        bindings:
+#          lmaoinput-in-0:
+#            consumer:
+#              configuration:
+#                key:
+#                  deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#          lmaooutput-in-0:
+#            producer:
+#              configuration:
+#                key:
+#                  deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
